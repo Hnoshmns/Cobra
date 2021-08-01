@@ -33,6 +33,8 @@ module.exports = {
     XTEAM_API: process.env.XTEAM_API === undefined ? 'e790c2e470fd0a63' : process.env.XTEAM_API,
     ZEKS_API: process.env.ZEKS_API === undefined ? 'ZKgeixXNpKPOs2Xt7HgUIiBaJ6w' : process.env.ZEKS_API,
     LOLHUMAN_API: process.env.LOLHUMAN_API === undefined ? 'notnow' : process.env.LOLHUMAN_API,
+    SONG_DOWN: process.env.SONG_DOWN === undefined ? 'Downloading' : process.env.SONG_DOWN,
+    SONG_UP: process.env.SONG_UP === undefined ? 'Uploading' : process.env.SONG_UP,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
