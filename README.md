@@ -15,7 +15,7 @@
 
 [![Run on Repl.it](https://repl.it/badge/github/TOXIC-DEVIL/WhatsAsenaPublic)](https://replit.com/@SisulaRansika/ALEXA?v=1)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sisula/alexa)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sf0gmailcomceb5ace3/scbdecwc52q98wd49sva62wcwcec)
 
 ### The Hard Method
 ``` js
