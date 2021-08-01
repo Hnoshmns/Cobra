@@ -21,6 +21,30 @@
             "description": "Bot භාෂාව.සිංහල භාෂාව සඳහා HI ලෙස සඳහන් කරන්න.",
             "required": true,
             "value": "HI"
+            
+        },
+        "SONG_DOWN": {
+            "description": " Turn your account into a chatbot!",
+            "required": true,
+            "value": "downloading"
+            
+        },
+        "SONG_UP": {
+            "description": " Turn your account into a chatbot!",
+            "required": true,
+            "value": "uploading"
+            
+        },
+        "VIDEO_DOWN": {
+            "description": " Turn your account into a chatbot!",
+            "required": true,
+            "value": "downlolading"
+            
+        },
+        "VIDEO_UP": {
+            "description": " Turn your account into a chatbot!",
+            "required": true,
+            "value": "uploading"
         },
         "ANTİ_LİNK": {
             "description": ". Link Blocking System.",
