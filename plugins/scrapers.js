@@ -456,7 +456,7 @@ if (config.WORKTYPE == 'private') {
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
+            quality: 'bestaudio',
         });
     
         got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
