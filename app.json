@@ -24,27 +24,27 @@
             
         },
         "SONG_DOWN": {
-            "description": " Turn your account into a chatbot!",
+            "description": "ගීත Download කිරීමේදී ලැබෙන පණිවිඩය වෙනස් කිරීම!... මෙය අත්‍යවශ්‍යම නොවේ",
             "required": true,
-            "value": "downloading"
+            "value": "*♦️ ඔබේ ගීතය Download කරමින් පවතී...*"
             
         },
         "SONG_UP": {
-            "description": " Turn your account into a chatbot!",
+            "description": "ගීත Upload කිරීමේදී ලැබෙන පණිවිඩය වෙනස් කිරීම!... මෙය අත්‍යවශ්‍යම නොව",
             "required": true,
-            "value": "uploading"
+            "value": "*♦️ ඔබේ ගීතය Upload කරමින් පවතී...*"
             
         },
         "VIDEO_DOWN": {
-            "description": " Turn your account into a chatbot!",
+            "description": "වීඩියෝ Download කිරීමේදී ලැබෙන පණිවිඩය වෙනස් කිරීම!... මෙය අත්‍යවශ්‍යම නොව",
             "required": true,
-            "value": "downlolading"
+            "value": "*♦️ ඔබේ වීඩියෝව Download කරමින් පවතී...*"
             
         },
         "VIDEO_UP": {
-            "description": " Turn your account into a chatbot!",
+            "description": "වීඩියෝ Upload කිරීමේදී ලැබෙන පණිවිඩය වෙනස් කිරීම!... මෙය අත්‍යවශ්‍යම නොව",
             "required": true,
-            "value": "uploading"
+            "value": "*♦️ ඔබේ වීඩියෝව Upload කරමින් පවතී...*"
         },
         "ANTİ_LİNK": {
             "description": ". Link Blocking System.",
