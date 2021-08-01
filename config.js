@@ -35,6 +35,8 @@ module.exports = {
     LOLHUMAN_API: process.env.LOLHUMAN_API === undefined ? 'notnow' : process.env.LOLHUMAN_API,
     SONG_DOWN: process.env.SONG_DOWN === undefined ? 'Downloading' : process.env.SONG_DOWN,
     SONG_UP: process.env.SONG_UP === undefined ? 'Uploading' : process.env.SONG_UP,
+    VIDEO_DOWN: process.env.VIDEO_DOWN === undefined ? 'Downloading' : process.env.VIDEO_DOWN,
+    VIDEO_UP: process.env.VIDEO_UP === undefined ? 'Uploading' : process.env.VIDEO_UP,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
