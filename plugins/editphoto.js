@@ -19,7 +19,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
-    var webimage = await axios.get(`https://zenzapi.xyz/api/image/wasted?image=${match[1]}&APIKEY=e75b25d89d`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://zenzapi.xyz/api/photooxy/gtaposter?image=${match[1]}&apikey=e75b25d89d`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'cobra bot'})
 
