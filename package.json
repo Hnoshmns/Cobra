@@ -2,7 +2,7 @@
   "name": "WhatsAsenaDuplicated",
   "version": "1.3.2",
   "description": "cobra bot project.",
-  "main": "./scbdecwc52q98wd49sva62wcwcec/bot.js",
+  "main": "./WhatsAsenaDuplicated/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
