@@ -25,7 +25,7 @@ Asena.addCommand({ pattern: 'profinsta ?(.*)', fromMe: true, usage: Lang.USAGE, 
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://api.xteam.xyz/dl/igstalk?nama=chanux_bro&APIKEY=${userName}`)
+      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e790c2e470fd0a63`)
       .then(async (response) => {
         const {
           profile_pic_url,
