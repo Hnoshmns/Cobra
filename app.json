@@ -46,6 +46,16 @@
             "required": true,
             "value": "*♦️ ඔබේ වීඩියෝව Upload කරමින් පවතී...*"
         },
+        "XTEAM_API": {
+            "description": "xteamapi!... මෙය අත්‍යවශ්‍යම නොව",
+            "required": true,
+            "value": "e790c2e470fd0a63"
+        },
+        "ZEKS_API": {
+            "description": "zeks!... මෙය අත්‍යවශ්‍යම නොව",
+            "required": true,
+            "value": "odsMYXx67ZhT38w5hp5mgRKO8En"
+        },
         "ANTİ_LİNK": {
             "description": ". Link Blocking System.",
             "required": true,
