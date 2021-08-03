@@ -10,7 +10,7 @@
 
 -------------------------------------------------------------------------------------------------
  ________________________________________________________________________________________________
-## installation Simple Method
+## installation Simple
    
 
 [![Run on Repl.it](https://repl.it/badge/github/TOXIC-DEVIL/WhatsAsenaPublic)](https://replit.com/@SisulaRansika/ALEXA?v=1)
