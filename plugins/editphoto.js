@@ -47,7 +47,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
         
-            Asena.addCommand({pattern: 'wasted ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+            Asena.addCommand({pattern: 'wasted ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -57,7 +57,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
         
-    Asena.addCommand({pattern: 'gta ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'gta ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -67,7 +67,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
         
-    Asena.addCommand({pattern: 'circle ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'circle ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
