@@ -118,7 +118,7 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
             var fins = ''                           
             if (conf.LANG !== 'EN') {
-                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                ceviri = await translatte(response.data.cnt, {from: 'auto', to: 'EN'});
                 if ('text' in ceviri) {
                     fins = ceviri.text
                 }
@@ -151,7 +151,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                         await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                             var fins = ''                           
                             if (conf.LANG !== 'EN') {
-                                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                                ceviri = await translatte(response.data.cnt, {from: 'auto', to: 'EN'});
                                 if ('text' in ceviri) {
                                     fins = ceviri.text
                                 }
@@ -179,7 +179,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                     await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
-                            ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                            ceviri = await translatte(response.data.cnt, {from: 'auto', to: 'EN'});
                             if ('text' in ceviri) {
                                 fins = ceviri.text
                             }
@@ -244,7 +244,7 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
                 var son = encodeURI(ssc)
                 await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + son).then(async (response) => {
                     var trmsg = ''
-                    cevir = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                    cevir = await translatte(response.data.cnt, {from: 'auto', to: 'EN'});
                     if ('text' in cevir) {
                         trmsg = cevir.text
                     }
