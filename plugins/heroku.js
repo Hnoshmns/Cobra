@@ -652,7 +652,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC,
     }
     // ================================================== END CONFIG SCANNER ==================================================
 
-    if ((varKey = match[1].split('=')[0]) && (varValue = match[1].split('=')[1])) {
+    if ((varKey = match[1].split('#')[0]) && (varValue = match[1].split('#')[1])) {
         await heroku.patch(baseURI + '/config-vars', {
             body: {
                 [varKey]: varValue
