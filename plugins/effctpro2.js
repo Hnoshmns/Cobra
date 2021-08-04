@@ -40,8 +40,8 @@ Asena.addCommand({pattern: 'logopro', fromMe: true, desc: Lang.TET_DESC}, (async
 *⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .rainbow
 🔹𝙐𝙨𝙚➜ (.rainbow cobra)
 
-*⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .pentakiller
-🔹𝙐𝙨𝙚➜ (.pentakiller cobra)
+*⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .pentakill
+🔹𝙐𝙨𝙚➜ (.pentakill cobra)
 
 *⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .gavatar
 🔹𝙐𝙨𝙚➜ (.gavatar cobra)
@@ -117,8 +117,8 @@ Asena.addCommand({pattern: 'logopro', fromMe: false, desc: Lang.TET_DESC}, (asyn
 *⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .rainbow
 🔹𝙐𝙨𝙚➜ (.rainbow cobra)
 
-*⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .pentakiller
-🔹𝙐𝙨𝙚➜ (.pentakiller cobra)
+*⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .pentakill
+🔹𝙐𝙨𝙚➜ (.pentakill cobra)
 
 *⚜️𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .gavatar
 🔹𝙐𝙨𝙚➜ (.gavatar cobra)
