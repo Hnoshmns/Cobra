@@ -15,7 +15,7 @@ if (Config.WORKTYPE == 'private') {
 
  
 
-     Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+     Asena.addCommand({pattern: '9558 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
@@ -315,7 +315,7 @@ else if (Config.WORKTYPE == 'public') {
 
 
 
-     Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+     Asena.addCommand({pattern: '9558 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
