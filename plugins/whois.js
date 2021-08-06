@@ -1,33 +1,40 @@
-const Asena = require('../events');
+const cobra = require('../events');
 const { MessageType, Mimetype, GroupSettingChange, MessageOptions } = require('@adiwajshing/baileys');
-const Axios = require('axios');
 const fs = require('fs');
-const ffmpeg = require('fluent-ffmpeg');
-const {execFile} = require('child_process');
-const CON = require('../config');
+const axios = require('axios');
+const request = require('request');
+const got = require("got");
+const Config = require('../config');
 
-const Language = require('../language'); 
-const Lang = Language.getString('whois'); // Language Support
+const Language = require('../language');//language info
+const INFO_DESC = "කණ්ඩායමේ හෝ පුද්ගලයාගේ පාර-දත්ත දත්ත පෙන්වයි."//info
+const GROUP_SUB = "*💠කණ්ඩායමේ නම:*"//info
+const GROUP_JID = "*💭කණ්ඩායමේ JID අංකය:*"//info
+const GROUP_OWNER = "⚜️කණ්ඩායම් අයිතිය:*"//info
+const GROUP_LINK = "🆔කණ්ඩායමේ කේතය:*"//info
+const GROUP_DES = "*💠කණ්ඩායම් විස්තරය:*"//info
+const PRO_DESC = "*🗨️ විස්තරය :*"//info
+const PRO_JID = "*💬 User JID අංකය :*"//info
 
-if (CON.WORKTYPE == 'private') {
-
-    Asena.addCommand({ pattern: 'info', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
+if (Config.WORKTYPE == 'private') {
+    cobra.addCommand({ pattern: 'info', fromMe: true,  deleteCommand: false,  desc: INFO_DESC}, async (message, match) => { 
 
         if (message.jid.includes('-')) {
+
             var json = await message.client.groupMetadataMinimal(message.jid) 
 
             var code = await message.client.groupInviteCode(message.jid)
 
             var nwjson = await message.client.groupMetadata(message.jid) 
 
-            const msg =  Lang.SUB + `${nwjson.subject} \n\n`  + `*Grup ID:* ${json.id} \n\n` + Lang.OWN + `${json.owner} \n\n` + Lang.COD + `${code} \n\n` + Lang.DES + `\n\n${nwjson.desc}`
+            const msg = GROUP_SUB + `\n ${nwjson.subject} \n\n` + GROUP_JID + `\n ${json.id} \n\n` + GROUP_OWNER + `\n ${json.owner} \n\n` + GROUP_LINK + `\n https://chat.whatsapp.com/${code} \n\n` + GROUP_DES + `\n ${nwjson.desc}`
 
             var ppUrl = await message.client.getProfilePicture(message.jid) 
 
-            const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
+            const infodata = await axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer.from(resim.data), 
+                Buffer(infodata.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -36,35 +43,36 @@ if (CON.WORKTYPE == 'private') {
             var status = await message.client.getStatus(message.jid) 
             var usppUrl = await message.client.getProfilePicture(message.jid) 
             var usexists = await message.client.isOnWhatsApp(message.jid)
-            const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
-            const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
+            const pgmsg = PRO_JID + `\n ${usexists.jid} \n\n` + PRO_DES + `\n ${status.status}`
+            const prodata = await axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer.from(resimnw.data), 
+                Buffer(prodata.data), 
                 MessageType.image, 
-                { caption: nwmsg }
+                { caption: pgmsg }
             );
         }
     });
 }
-else if (CON.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'info', fromMe: false, desc: Lang.PL_DESC }, async (message, match) => { 
-
+else if (Config.WORKTYPE == 'public') {
+    cobra.addCommand({ pattern: 'info', fromMe: false, desc: INFO_DESC}, async (message, match) => { 
+        
         if (message.jid.includes('-')) {
+
             var json = await message.client.groupMetadataMinimal(message.jid) 
 
             var code = await message.client.groupInviteCode(message.jid)
 
             var nwjson = await message.client.groupMetadata(message.jid) 
 
-            const msg =  Lang.SUB + `${nwjson.subject} \n\n`  + `*Grup ID:* ${json.id} \n\n` + Lang.OWN + `${json.owner} \n\n` + Lang.COD + `${code} \n\n` + Lang.DES + `\n\n${nwjson.desc}`
-
+            const msg = GROUP_SUB + `\n ${nwjson.subject} \n\n` + GROUP_JID + `\n ${json.id} \n\n` + GROUP_OWNER + `\n ${json.owner} \n\n` + GROUP_LINK + `\n https://chat.whatsapp.com/${code} \n\n` + GROUP_DES + `\n ${nwjson.desc}`
+            
             var ppUrl = await message.client.getProfilePicture(message.jid) 
 
-            const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
+            const infodata = await axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer.from(resim.data), 
+                Buffer(infodata.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -73,46 +81,12 @@ else if (CON.WORKTYPE == 'public') {
             var status = await message.client.getStatus(message.jid) 
             var usppUrl = await message.client.getProfilePicture(message.jid) 
             var usexists = await message.client.isOnWhatsApp(message.jid)
-            const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
-            const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
+            const pgmsg = PRO_JID + `\n ${usexists.jid} \n\n` + PRO_DES + `\n ${status.status}`
+            const prodata = await axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer.from(resimnw.data), 
+                Buffer(prodata.data), 
                 MessageType.image, 
-                { caption: nwmsg }
-            );
-        }
-    });
-    Asena.addCommand({ pattern: 'info', fromMe: true, desc: Lang.PL_DESC, dontAddCommandList: true }, async (message, match) => { 
-
-        if (message.jid.includes('-')) {
-            var json = await message.client.groupMetadataMinimal(message.jid) 
-
-            var code = await message.client.groupInviteCode(message.jid)
-
-            var nwjson = await message.client.groupMetadata(message.jid) 
-
-            const msg =  Lang.SUB + `${nwjson.subject} \n\n`  + `*Grup ID:* ${json.id} \n\n` + Lang.OWN + `${json.owner} \n\n` + Lang.COD + `${code} \n\n` + Lang.DES + `\n\n${nwjson.desc}`
-
-            var ppUrl = await message.client.getProfilePicture(message.jid) 
-
-            const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
-
-            await message.sendMessage(
-                Buffer.from(resim.data), 
-                MessageType.image, 
-                { caption: msg }
-            );
-        }
-        else {
-            var status = await message.client.getStatus(message.jid) 
-            var usppUrl = await message.client.getProfilePicture(message.jid) 
-            var usexists = await message.client.isOnWhatsApp(message.jid)
-            const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
-            const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
-            await message.sendMessage(
-                Buffer.from(resimnw.data), 
-                MessageType.image, 
-                { caption: nwmsg }
+                { caption: pgmsg }
             );
         }
     });
