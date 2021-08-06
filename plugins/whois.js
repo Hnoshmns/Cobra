@@ -34,7 +34,7 @@ if (Config.WORKTYPE == 'private') {
             const infodata = await axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer(infodata.data), 
+                Buffer.from(infodata.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -46,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
             const pgmsg = PRO_JID + `\n ${usexists.jid} \n\n` + PRO_DES + `\n ${status.status}`
             const prodata = await axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer(prodata.data), 
+                Buffer.from(prodata.data), 
                 MessageType.image, 
                 { caption: pgmsg }
             );
@@ -72,7 +72,7 @@ else if (Config.WORKTYPE == 'public') {
             const infodata = await axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer(infodata.data), 
+                Buffer.from(infodata.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -84,7 +84,7 @@ else if (Config.WORKTYPE == 'public') {
             const pgmsg = PRO_JID + `\n ${usexists.jid} \n\n` + PRO_DES + `\n ${status.status}`
             const prodata = await axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer(prodata.data), 
+                Buffer.from(prodata.data), 
                 MessageType.image, 
                 { caption: pgmsg }
             );
