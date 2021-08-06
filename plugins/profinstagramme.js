@@ -61,23 +61,19 @@ Asena.addCommand({ pattern: 'profinsta ?(.*)', fromMe: false, usage: Lang.USAGE,
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://api-anoncybfakeplayer.herokuapp.com/igstalk?username=${userName}`)
+      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e790c2e470fd0a63`)
       .then(async (response) => {
         const {
-          pic,
+          profile_pic_url,
           username,
-          bio,
-          follower,
-          following,
-        } = response.data
+          biography,
+        } = response.data.result.user
 
-        const profileBuffer = await axios.get(pic, {responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(profile_pic_url, {responseType: 'arraybuffer'})
 
         const msg = `
         *${Lang.USERNAME}*: ${username}    
-        *${Lang.BIO}*: ${bio}
-        *${Lang.FOLLOWERS}*: ${follower}
-        *${Lang.FOLLOWS}*: ${following}`
+        *${Lang.BIO}*: ${biography}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg
