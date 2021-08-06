@@ -13,7 +13,7 @@ const GROUP_JID = "*💭කණ්ඩායමේ JID අංකය:*"//info
 const GROUP_OWNER = "⚜️කණ්ඩායම් අයිතිය:*"//info
 const GROUP_LINK = "🆔කණ්ඩායමේ කේතය:*"//info
 const GROUP_DES = "*💠කණ්ඩායම් විස්තරය:*"//info
-const PRO_DESC = "*🗨️ විස්තරය :*"//info
+const PRO_DES = "*🗨️ විස්තරය :*"//info
 const PRO_JID = "*💬 User JID අංකය :*"//info
 
 if (Config.WORKTYPE == 'private') {
