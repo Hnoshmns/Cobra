@@ -12,16 +12,16 @@
             "WARN": "අවවාදයයි"
         },
         "_plugin": {
-            "INSTALL_DESC": "Install external plugins.",
+            "INSTALL_DESC": "බාහිර Plugin සවි කරන්න.",
             "NEED_URL": "Please enter a URL! Example:",
             "UNOFF": "⚠️ *Attention!* \n*The plugin you have installed is not official!*",
             "INVALID_URL": "```Please enter a valid url!```",
             "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
             "INSTALLED": "*✅ Plugin has been successfully installed!*",
-            "PLUGIN_DESC": "Shows the plugins you have installed.",
+            "PLUGIN_DESC": "install කර ඇති plugin පෙන්වයි.",
             "INSTALLED_FROM_REMOTE": "*Plugins you install externally:*\n",
             "NO_PLUGIN": "*You have not installed any external plugins!*",
-            "REMOVE_DESC": "Removes the plugin.",
+            "REMOVE_DESC": "Plugin ඉවත් කරයි.",
             "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
             "DELETED": "*✅ Module successfully deleted!*",
@@ -266,7 +266,7 @@
             "NOT_FOUND": "*මට මෙම නම සහිත නගරයක් සොයාගත නොහැකි විය. 😖*"
         },
         "web": {
-            "SPEEDTEST_DESC": "Measures Download and Upload speed.",
+            "SPEEDTEST_DESC": "Download හා Upload කිරීමේ වේගය මැනීම.",
             "SPEEDTESTING": "```Running speed test...```",
             "SPEEDTEST_RESULT": "*Speed ​​test completed!*",
             "UPLOAD": "Upload",
@@ -279,15 +279,15 @@
             "URL": "Shorten the long link."
         },
         "conventer": {
-            "MP4TOAUDİO_DESC": "Converts video to sound.",
-            "MP4TOAUDİO_NEEDREPLY": "*You Must Reply to a Video!*",
-            "MP4TOAUDİO": "```Converting Video to Audio..```",
+            "MP4TOAUDİO_DESC": "වීඩියෝව mp3 බවට පරිවර්තනය කරයි.",
+            "MP4TOAUDİO_NEEDREPLY": "*ඔබ වීඩියෝවකට mention දිය යුතුය!*",
+            "MP4TOAUDİO": "```🔄 වීඩියෝව mp3 බවට පරිවර්තනය කිරීම..```",
             "ANİM_STİCK": "Converts animated stickers to video.",
             "ANİMATE": "```Converting Animated Sticker To Video..```",
-            "STİCKER_DESC": "Converts the sticker to a photo.",
-            "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
-            "STİCKER": "```Converting the sticker to a photo..```",
-            "XMEDİA_DESC": "It is a plugin with more than 25 media tools.",
+            "STİCKER_DESC": "ස්ටිකරය ඡායාරූපයක් බවට පත් කරයි.",
+            "STİCKER_NEEDREPLY": "*ඔබ ස්ටිකරයකට mention දිය යුතුය!*",
+            "STİCKER": "```🔄 ස්ටිකරය ඡායාරූපයකට පරිවර්තනය කිරීම..```",
+            "XMEDİA_DESC": "එය මාධ්‍ය මෙවලම් 25 කට වඩා ඇති ප්ලගිනයකි.",
             "T_FALSE": "```❌ Incorrect Blend Effect Entered!```\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
             "T_NOT": "```💭 You Need To Enter Any Blend Effects!\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
             "T_DESC": "Applies the selected TBlend effect to videos." 
@@ -368,13 +368,13 @@
             "GÜNİKİMUTE": "*The group was silenced for 2 day!*",
             "GÜNÜÇMUTE": "*The group was silenced for 3 day!*",
             "TÜR": "*Unknown Command!*\n_Minute: 1-59m_\n_Hour: 1-12h_\n_Day: 1d-3d_",
-            "MUTE_DESC": "Turns off group chat. Only admins can send messages!",
+            "MUTE_DESC": "කණ්ඩායම් කතාබස් ක්‍රියාවිරහිත කරයි. පණිවිඩ යැවිය හැක්කේ පරිපාලකයින්ට පමණි!",
             "MUTE_OPEN": "```The group chat has unmuted!```"
         },
         "unvoice": {
-            "UV_DESC": "Converts audio to sound recording.",
-            "UV_REPLY": "*You Must Reply to the Audio File!*",
-            "UV_PROC": "```Converting to Sound Recording..```"
+            "UV_DESC": "Mp3 files, voice message බවට පරිවර්තනය කරයි.",
+            "UV_REPLY": "*ඔබ mp3 file mention දිය යුතුය!*",
+            "UV_PROC": "```🔄 ශබ්ද පටිගත කිරීමකට පරිවර්තනය කිරීම..```"
         },
         "ffmpeg": {
             "FF_DESC": "වීඩියෝවට අපේක්ෂිත ffmpeg පෙරණය යොදයි.\n⌨️ Example: .ffmpeg fade=in:0:30",
@@ -396,7 +396,7 @@
             "VİD_NEED": "```Please Reply to Any Video!```"
         },
         "carbon": {
-            "CARBON_DESC": "text to image සඳහා carbon.sh භාවිතා කරයි",
+            "CARBON_DESC": "ඔබ mention කරන text එක carbon.sh මඟින් carbon image කරයි.",
             "CARBON_NEEDWORD": "*Not enough arguments to translate Text-to-Image!*\nExample: ```.carbon test```\nExample: ```.carbon making#test```",
             "CARBON_WARN": "Please only type in en and tr character!"
         },
@@ -414,13 +414,13 @@
             "TTP_DESC": "පෙළ සරල සිතුවම් බවට පරිවර්තනය කරයි.",
             "ATTP_DESC": "දේදුන්න ආචරණය පෙළට ස්ටිකරයක් ලෙස එක් කරයි.",
             "NEED_WORD": "*You must enter words!*",
-            "ANIME_DESC": "It writes the text inside the banner the anime girl is holding",
-            "TRUMP_DESC": "Converts the text to Trump's tweet.",
-            "CHANGE_DESC": "Turns the text into the change my mind poster.",
-            "GLOW_DESC": "Converts text into neon painting."
+            "ANIME_DESC": "එය anime girl රඳවාගෙන සිටින banner තුළ text ලියයි",
+            "TRUMP_DESC": "Trumpගේ tweet එකට text පරිවර්තනය කරයි.",
+            "CHANGE_DESC": "Change my mind meme පෝස්ටරය වෙනස් කිරීම සඳහා text හරවයි.",
+            "GLOW_DESC": "පෙළ neon painting බවට පරිවර්තනය කරයි."
         },
         "wallpaper": {
-            "WP": "It sends high resolution wallpapers.",
+            "WP": "එය high resolution wallpaper යවයි.",
             "TET_DESC": "Text effective රූප බවට පරිවර්තනය කිරීම සඳහා විධාන කට්ටලයක්."
         },
         "webss": {
@@ -428,7 +428,7 @@
             "LİNK": "You must enter link!"
         },
         "voicy": {
-            "NEED_REPLY": "```Please reply to any message!```",
+            "NEED_REPLY": "```කරුණාකර ඕනෑම පණිවිඩයකට mention දෙන්න!```",
             "ONLY_AUDIO":"```Only audio file is accepted.```",
             "USAGE": "It converts audio to text.",
             "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
@@ -506,7 +506,7 @@
             "ARAT": "Searched Song:"
         },
         "covid": {
-            "COV_DESC": "Shows the daily and overall covid table of more than 15 countries.",
+            "COV_DESC": "රටවල් 15 කට වැඩි ගණනක දෛනික සහ සමස්ත කොවිඩ් වගුව පෙන්වයි.",
             "NOT": "```Sorry I Could Not Find A Country Like This! Please Enter Applicable Country Codes!```\n\n```Country Codes:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
