@@ -10,8 +10,8 @@ const Language = require('../language');//language info
 const INFO_DESC = "කණ්ඩායමේ හෝ පුද්ගලයාගේ පාර-දත්ත දත්ත පෙන්වයි."//info
 const GROUP_SUB = "*💠කණ්ඩායමේ නම:*"//info
 const GROUP_JID = "*💭කණ්ඩායමේ JID අංකය:*"//info
-const GROUP_OWNER = "⚜️කණ්ඩායම් අයිතිය:*"//info
-const GROUP_LINK = "🆔කණ්ඩායමේ කේතය:*"//info
+const GROUP_OWNER = "*⚜️කණ්ඩායම් අයිතිය:*"//info
+const GROUP_LINK = "*🆔කණ්ඩායමේ කේතය:*"//info
 const GROUP_DES = "*💠කණ්ඩායම් විස්තරය:*"//info
 const PRO_DES = "*🗨️ විස්තරය :*"//info
 const PRO_JID = "*💬 User JID අංකය :*"//info
@@ -55,7 +55,7 @@ if (Config.WORKTYPE == 'private') {
 }
 
 else if (Config.WORKTYPE == 'public') {
-    cobra.addCommand({ pattern: 'info', fromMe: false, desc: INFO_DESC}, async (message, match) => { 
+    cobra.addCommand({ pattern: 'info', fromMe: true, desc: INFO_DESC}, async (message, match) => { 
         
         if (message.jid.includes('-')) {
 
