@@ -507,7 +507,7 @@
         },
         "covid": {
             "COV_DESC": "රටවල් 15 කට වැඩි ගණනක දෛනික සහ සමස්ත කොවිඩ් වගුව පෙන්වයි.",
-            "NOT": "```Sorry I Could Not Find A Country Like This! Please Enter Applicable Country Codes!```\n\n```Country Codes:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
+            "NOT": "..."
         }
     }
 }
