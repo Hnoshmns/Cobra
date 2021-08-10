@@ -30,7 +30,7 @@ const PHN_CHIP = "Chipset-:"
 const PHN_BAT = "Battery-:"
 const PHN_BTT = "Battery Type-:"
 const PHN_DETAIL = "detail-:"
-const NOT_FOUND = "*Can't Find Anything!.*"
+const NOT_FOUND = "*not found -:*"
 
 
 
