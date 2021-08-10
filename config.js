@@ -37,6 +37,7 @@ module.exports = {
     SONG_UP: process.env.SONG_UP === undefined ? '*♦️ ඔබේ ගීතය Upload කරමින් පවතී...*' : process.env.SONG_UP,
     VIDEO_DOWN: process.env.VIDEO_DOWN === undefined ? '*♦️ ඔබේ වීඩියෝව Download කරමින් පවතී...*' : process.env.VIDEO_DOWN,
     VIDEO_UP: process.env.VIDEO_UP === undefined ? '*♦️ ඔබේ වීඩියෝව Upload කරමින් පවතී...*' : process.env.VIDEO_UP,
+     LOGOPK_IMG: process.env.LOGOPK_IMG === undefined ? 'https://telegra.ph/file/a1b5345cf2bb012740646.jpg' : process.env.LOGOPK_IMG,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
