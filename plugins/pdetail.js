@@ -88,7 +88,7 @@ cobra.addCommand({ pattern: 'pdetail ?(.*)', fromMe: true, usage: USAGE, desc: P
         })
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage(NOT_FOUND + userName)),
+        async (err) => await message.sendMessage(errorMessage(NOT_FOUND + pname)),
       )
   },
 
@@ -149,7 +149,7 @@ cobra.addCommand({ pattern: 'pdetail ?(.*)', fromMe: false, usage: USAGE, desc: 
         })
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage(NOT_FOUND + userName)),
+        async (err) => await message.sendMessage(errorMessage(NOT_FOUND + pname)),
       )
   },
 
