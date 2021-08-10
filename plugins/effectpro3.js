@@ -1,4 +1,4 @@
-const Asena = require('../events');
+const cobra = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
@@ -7,24 +7,11 @@ const Language = require('../language');
 const Lang = Language.getString('wallpaper');
 
 if (Config.WORKTYPE == 'private') {
-Asena.addCommand({pattern: 'spack', fromMe: true, desc: Lang.TET_DESC}, (async (message, match) => {
+cobra.addCommand({pattern: 'spack', fromMe: true, desc: Lang.TET_DESC}, (async (message, match) => {
 
-    var r_text = new Array ();
-    
-    
-    r_text[0] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[1] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[2] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[3] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[4] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[5] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    
-        
-     var i = Math.floor(6*Math.random())
+    var logoimg = await axios.get(Config.LOGOPK_IMG, { responseType: 'arraybuffer' })
 
-    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage (Buffer.from (respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*━━━━━🐍COBRA LOGO PACK🐍━━━━━*
+    await message.sendMessage (Buffer.from (logoimg.data), MessageType.image, {mimetype: Mimetype.png, caption: `*━━━━━🐍COBRA LOGO PACK🐍━━━━━*
 *🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .metalic 
 🔹𝙐𝙨𝙚➜ .metalic (.metalic cobra)
 
@@ -163,24 +150,11 @@ _*🌍ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜱɪꜱᴜʟᴀ ᴡᴇʟɢᴀᴍᴀɢᴇ*_
 }
 
 if (Config.WORKTYPE == 'public') {
-Asena.addCommand({pattern: 'spack', fromMe: false, desc: Lang.TET_DESC}, (async (message, match) => {
+cobra.addCommand({pattern: 'spack', fromMe: false, desc: Lang.TET_DESC}, (async (message, match) => {
 
-    var r_text = new Array ();
-    
-    
-    r_text[0] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[1] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[2] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[3] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[4] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    r_text[5] = "https://telegra.ph/file/a1b5345cf2bb012740646.jpg";
-    
-        
-     var i = Math.floor(6*Math.random())
+    var logoimg = await axios.get(Config.LOGOPK_IMG, { responseType: 'arraybuffer' })
 
-    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-
-    await message.sendMessage (Buffer.from (respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*━━━━━🐍COBRA LOGO PACK🐍━━━━━*
+    await message.sendMessage (Buffer.from (logoimg.data), MessageType.image, {mimetype: Mimetype.png, caption: `*━━━━━🐍COBRA LOGO PACK🐍━━━━━*
 *🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .metalic 
 🔹𝙐𝙨𝙚➜ .metalic (.metalic cobra)
 
