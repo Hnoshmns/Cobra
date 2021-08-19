@@ -1,4 +1,4 @@
-/* coded by sisula welgamage
+/* coded by sisula 
 cobra dev.
   c
   r
