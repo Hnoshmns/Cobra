@@ -55,7 +55,7 @@ if (Config.WORKTYPE == 'private') {
 }
 
 else if (Config.WORKTYPE == 'public') {
-    cobra.addCommand({ pattern: 'info', fromMe: true, desc: INFO_DESC}, async (message, match) => { 
+    cobra.addCommand({ pattern: 'info', fromMe: false, desc: INFO_DESC}, async (message, match) => { 
         
         if (message.jid.includes('-')) {
 
