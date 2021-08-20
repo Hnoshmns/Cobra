@@ -77,7 +77,7 @@ cobra.addCommand({ pattern: 'github ?(.*)', fromMe: true, usage: USAGE, desc: PH
         `*${PHN_CREAT}* ${created_at}`
         
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: msg +'\n'+'*Copyright © 2021 COBRABOT*'
+          caption: msg +'\n'+'*copyright (c) 2021 cobrabot*'
         })
       })
       .catch(
@@ -133,7 +133,7 @@ cobra.addCommand({ pattern: 'github ?(.*)', fromMe: false, usage: USAGE, desc: P
         `*${PHN_CREAT}* ${created_at}`
         
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: msg +'\n'+'*Copyright © 2021 COBRABOT*'
+          caption: msg +'\n'+'*copyright (c) 2021 cobrabot*'
         })
       })
       .catch(
