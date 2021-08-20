@@ -87,7 +87,7 @@ const recognizeAudio = () => {
         body: fs.readFileSync('output.wav'),
         headers: headers
     }
-    return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
+    return fetch("https://api.wit.ai/speech?v=20200513", requestBody)
         .then(response => response.json())
         .then(json => json._text)
 }
