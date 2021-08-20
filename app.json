@@ -45,6 +45,12 @@
             "description": "වීඩියෝ Upload කිරීමේදී ලැබෙන පණිවිඩය වෙනස් කිරීම!... මෙය අත්‍යවශ්‍යම නොව",
             "required": true,
             "value": "*♦️ ඔබේ වීඩියෝව Upload කරමින් පවතී...*"
+            
+        },
+        "CAPTION_MSG": {
+            "description": "Customizable Caption Message",
+            "required": true,
+            "value": "*Copyright (c) 2021 cobra bot*"
         },
         "XTEAM_API": {
             "description": "xteamapi!... මෙය අත්‍යවශ්‍යම නොව",
