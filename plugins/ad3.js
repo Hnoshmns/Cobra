@@ -118,7 +118,7 @@ if (Config.WORKTYPE == 'private') {
 
 if (Config.WORKTYPE == 'public') {
    
-      Asena.addCommand({pattern: 'naruto ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+      Asena.addCommand({pattern: 'naruto ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -128,7 +128,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-   Asena.addCommand({pattern: 'zwolf ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   Asena.addCommand({pattern: 'zwolf ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   var sf0bomgn = Config.ZEKS_API;
@@ -145,7 +145,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-   Asena.addCommand({pattern: 'breakwall ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   Asena.addCommand({pattern: 'breakwall ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -155,7 +155,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-      Asena.addCommand({pattern: 'dropwater ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+      Asena.addCommand({pattern: 'dropwater ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -165,7 +165,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-   Asena.addCommand({pattern: 'flower ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   Asena.addCommand({pattern: 'flower ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -175,7 +175,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-      Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+      Asena.addCommand({pattern: 'shadow ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -185,7 +185,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-      Asena.addCommand({pattern: 'flame ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+      Asena.addCommand({pattern: 'flame ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -195,7 +195,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-   Asena.addCommand({pattern: 'zglow ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   Asena.addCommand({pattern: 'zglow ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -205,7 +205,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-      Asena.addCommand({pattern: 'clight ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+      Asena.addCommand({pattern: 'clight ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
@@ -215,7 +215,7 @@ if (Config.WORKTYPE == 'public') {
 
     }));
    
-   Asena.addCommand({pattern: 'wfire ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+   Asena.addCommand({pattern: 'wfire ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var sf0bomgn = Config.ZEKS_API;
