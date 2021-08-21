@@ -67,17 +67,7 @@ if (Config.WORKTYPE == 'private') {
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/xmas3d?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
-
-   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
-
-    }));
-
-    Asena.addCommand({pattern: 'neon ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-
-    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
-    var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/neon?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/xmas?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -97,7 +87,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/sandengraved?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/sand-engraved?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -107,7 +97,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dglue?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/glue?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -117,7 +107,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/metaldarkgold?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/metal-dark?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -184,17 +174,17 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/sandwriting?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/sand-writing?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'cloud ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'lava ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/cloudtext?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/lava?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -211,17 +201,17 @@ if (Config.WORKTYPE == 'private') {
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/ph?text=${topText}&text2=${bottomText}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/phub?text1=${topText}&text2=${bottomText}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'snow ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tsky ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/snowtext?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/sky?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -241,7 +231,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/minion3d?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/minion?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -258,7 +248,7 @@ if (Config.WORKTYPE == 'private') {
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvel?text=${topText}&text2=${bottomText}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/marvel?text1=${topText}&text2=${bottomText}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -275,7 +265,7 @@ if (Config.WORKTYPE == 'private') {
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvelstudios?text=${topText}&text2=${bottomText}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/marvel2?text1=${topText}&text2=${bottomText}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -285,7 +275,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/bloodontheroastedglass?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/blood?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -295,7 +285,7 @@ if (Config.WORKTYPE == 'private') {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/blackpink?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/blackpink?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
@@ -315,7 +305,7 @@ else if (Config.WORKTYPE == 'public') {
 
 
 
-     Asena.addCommand({pattern: '9558 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+          Asena.addCommand({pattern: '9558 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
@@ -333,7 +323,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-        Asena.addCommand({pattern: '1917 ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+        Asena.addCommand({pattern: '1917 ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
@@ -344,7 +334,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-     Asena.addCommand({pattern: 'vintage ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+     Asena.addCommand({pattern: 'vintage ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
@@ -362,28 +352,18 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-     Asena.addCommand({pattern: 'xmas ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+     Asena.addCommand({pattern: 'xmas ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
       
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/xmas3d?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/xmas?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'neon ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
-
-    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
-    var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/neon?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
-
-   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
-
-    }));
-
-    Asena.addCommand({pattern: 'beach ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'beach ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
@@ -393,37 +373,37 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    Asena.addCommand({pattern: 'graved ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'graved ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/sandengraved?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/sand-engraved?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'glue ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'glue ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/3dglue?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/glue?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-   Asena.addCommand({pattern: 'metald ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+   Asena.addCommand({pattern: 'metald ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/metaldarkgold?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/metal-dark?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'galaxyneon ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'galaxyneon ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
@@ -433,7 +413,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'sparkling ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'sparkling ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   
@@ -450,7 +430,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'watercolour ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'watercolour ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -460,7 +440,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ninjalogo ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.NEED_WORD);
 
@@ -470,7 +450,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'lightneon ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'lightneon ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
 
@@ -480,27 +460,27 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'sandwriting ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'sandwriting ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/sandwriting?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/sand-writing?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'cloud ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'lava ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/cloudtext?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/lava?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'pornhub ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'pornhub ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   var ceb5ace3 = Config.XTEAM_API;
@@ -511,23 +491,23 @@ else if (Config.WORKTYPE == 'public') {
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/ph?text=${topText}&text2=${bottomText}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/phub?text1=${topText}&text2=${bottomText}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'snow ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tsky ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/snowtext?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/sky?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'sumsand ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'sumsand ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
@@ -537,17 +517,17 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    Asena.addCommand({pattern: 'minion ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'minion ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/minion3d?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/minion?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   var ceb5ace3 = Config.XTEAM_API;
@@ -558,13 +538,13 @@ else if (Config.WORKTYPE == 'public') {
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvel?text=${topText}&text2=${bottomText}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/marvel?text1=${topText}&text2=${bottomText}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'studiomarvel ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'studiomarvel ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
   var ceb5ace3 = Config.XTEAM_API;
@@ -575,33 +555,33 @@ else if (Config.WORKTYPE == 'public') {
         topText = split[0];
 }
 
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/marvelstudios?text=${topText}&text2=${bottomText}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/marvel2?text1=${topText}&text2=${bottomText}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'blood ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'blood ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/bloodontheroastedglass?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/blood?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: 'blackpink ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'blackpink ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     var ceb5ace3 = Config.XTEAM_API;
-    var webimage = await axios.get(`https://api.xteam.xyz/textpro/blackpink?text=${match[1]}&APIKEY=${ceb5ace3}`, { responseType: 'arraybuffer' })
+    var webimage = await axios.get(`https://h4ck3rs404-api.herokuapp.com/api/textprome/blackpink?text=${match[1]}&apikey=h4ck3rs404`, { responseType: 'arraybuffer' })
 
     await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
 
-    Asena.addCommand({pattern: '3dtext ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: '3dtext ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
     
