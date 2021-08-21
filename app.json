@@ -9,7 +9,7 @@
     "success_url": "https://t.me/",
     "stack": "container",
     "env": {
-        "ASENA_SESSION": {
+        "COBRA_SESSION": {
             "description": "Qr කේතය scan කළ පසුව ලැබෙන කේතයන්.",
             "required": true
         },
