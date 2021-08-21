@@ -1,8 +1,9 @@
-/* Copyright (C) 2020 TOXIC DEVIL
-CODDED BY TOXIC DEVIL
+/* Copyright (C) 2021 cobra bot
+coded by yusuf usta
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsenaPublic - TOXIC DEVIL
+cobrabot2021
+cobra dev.
 */
 
 const Asena = require('../events');
@@ -31,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*Copyright@COBRABOT*' })
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*ᴄᴏʙʀᴀʙᴏᴛ*' })
      }
     }));
 
@@ -63,7 +64,7 @@ else if (Config.WORKTYPE == 'public') {
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*Copyright@COBRABOT*' })
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*ᴄᴏʙʀᴀʙᴏᴛ*' })
      }
     }));
 
