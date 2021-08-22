@@ -7,7 +7,7 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
-const dd = "Made by WhatsAsena"
+const dd = "Copyright © 2021 | 🐍COBRABOT🐍"
 
 const Language = require('../language');
 const Lang = Language.getString('log');
