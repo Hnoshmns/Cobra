@@ -17,7 +17,7 @@ if (Config.WORKTYPE == 'private') {
 
     var webimage = await axios.get(`http://lolhuman.herokuapp.com/api/tiktokwm?apikey=a776a857c5afc5855e0eb023&url=${match[1]}`, { responseType: 'arraybuffer' })
 
-   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.video, {mimetype: Mimetype.jpg, caption: 'Copyright © 2021 | WhatsAlexa'})
+   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.video, {mimetype: Mimetype.jpg, caption: 'Copyright (c) cobra bot'})
 
     }));
 }
