@@ -32,7 +32,7 @@ module.exports = {
     BYE_GIF: process.env.BYE_GIF === undefined ? 'https://tinyurl.com/queenamdi-goodbye' : process.env.BYE_GIF,
     XTEAM_API: process.env.XTEAM_API === undefined ? 'e790c2e470fd0a63' : process.env.XTEAM_API,
     ZEKS_API: process.env.ZEKS_API === undefined ? 'odsMYXx67ZhT38w5hp5mgRKO8En' : process.env.ZEKS_API,
-    LOLHUMAN_API: process.env.LOLHUMAN_API === undefined ? 'notnow' : process.env.LOLHUMAN_API,
+    ZUKI: process.env.ZUKI === undefined ? 'https://hadi-api.herokuapp.com' : process.env.ZUKI,
     SONG_DOWN: process.env.SONG_DOWN === undefined ? '*♦️ ඔබේ ගීතය Download කරමින් පවතී...*' : process.env.SONG_DOWN,
     SONG_UP: process.env.SONG_UP === undefined ? '*♦️ ඔබේ ගීතය Upload කරමින් පවතී...*' : process.env.SONG_UP,
     VIDEO_DOWN: process.env.VIDEO_DOWN === undefined ? '*♦️ ඔබේ වීඩියෝව Download කරමින් පවතී...*' : process.env.VIDEO_DOWN,
