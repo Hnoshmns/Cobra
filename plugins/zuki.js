@@ -1,7 +1,7 @@
 
 /* Codded by @sisula
 blank page
-*/
+
 const cobra = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
@@ -1125,5 +1125,5 @@ cobra.addCommand({pattern: 'cup ?(.*)', fromMe: false, dontAddCommandList: true}
   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: Config.CAPTION_MSG})
 
     }));
-}
+}*/
  
