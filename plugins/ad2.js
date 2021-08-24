@@ -1,6 +1,6 @@
 /* Codded by @sisula
 
-*/
+
 const Asena = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
@@ -581,4 +581,4 @@ else if (Config.WORKTYPE == 'public') {
    await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: 'Copyright © 2021 | 🐍COBRABOT🐍'})
 
     }));
-}
+}*/
