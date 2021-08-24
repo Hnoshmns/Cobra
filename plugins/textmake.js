@@ -32,7 +32,7 @@ if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos
 if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-Asena.addCommand({pattern: 'txtit$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
+Asena.addCommand({pattern: '258525449214626$', fromMe: wk, desc: desc_msg, dontAddCommandList: true}, (async (message, match) => {
     var t1 = ''
     var t2 = ''
     var t3 = ''
@@ -203,8 +203,8 @@ Asena.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}, 
 }));
 Asena.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -307,8 +307,8 @@ Asena.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true},
 }));
 Asena.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -373,8 +373,8 @@ Asena.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true},
 }));
 Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -401,8 +401,8 @@ Asena.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: true}
 }));
 Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -429,8 +429,8 @@ Asena.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: true
 }));
 Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -457,8 +457,8 @@ Asena.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: tru
 }));
 Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -485,8 +485,8 @@ Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: true}
 }));
 Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -513,8 +513,8 @@ Asena.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}, 
 }));
 Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -541,8 +541,8 @@ Asena.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true},
 }));
 Asena.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
@@ -607,8 +607,8 @@ Asena.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true}, (
 }));
 Asena.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var topText, bottomText; 
-    if (match[1].includes(';')) {
-        var split = match[1].split(';');
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
         topText = split[0];
         bottomText = split[1];
     } else {
