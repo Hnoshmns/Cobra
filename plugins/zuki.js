@@ -22,7 +22,7 @@ if (Config.WORKTYPE == 'private') {
        topText = split[0];
 }
 
-  var webimage = await axios.get(`Config.ZUKI + /api/photoxy/tiktok-effect?teks=${topText}&teks2=${bottomText}`, { responseType: 'arraybuffer' })
+  var webimage = await axios.get(Config.ZUKI + `/api/photoxy/tiktok-effect?teks=${topText}&teks2=${bottomText}`, { responseType: 'arraybuffer' })
 
   await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg , caption: Config.CAPTION_MSG})
 
