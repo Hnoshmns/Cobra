@@ -1,4 +1,4 @@
-/*
+
 const cobra = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
@@ -27,9 +27,6 @@ cobra.addCommand({pattern: 'spack', fromMe: true, desc: Lang.TET_DESC}, (async (
 
 *🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .ccup 
 🔹𝙐𝙨𝙚➜   .ccup (.ccup cobra)
-
-*🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜*  .love 
-🔹𝙐𝙨𝙚➜   .love (.love cobra)
 
 *🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .cofee  
 🔹𝙐𝙨𝙚➜ .cofee (.cofee cobra)
@@ -136,8 +133,6 @@ cobra.addCommand({pattern: 'spack', fromMe: true, desc: Lang.TET_DESC}, (async (
 *🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .zwater   
 🔹𝙐𝙨𝙚➜ (.zwater  cobra)
 
-*🔰𝘾𝙤𝙢𝙢𝙖𝙣𝙙➜* .bear   
-🔹𝙐𝙨𝙚➜ (.bear    cobra)
 
 ⚠️අවසානෙට ඉලක්කම් දාන්න තියන 
 command වල ඉලක්කම අනිවාරෙන් දාන්න
@@ -291,4 +286,4 @@ _*🌍ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜱɪꜱᴜʟᴀ ᴡᴇʟɢᴀᴍᴀɢᴇ*_
 `}) 
 
  }));
-}*/
+}
