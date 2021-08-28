@@ -7,7 +7,7 @@ const Language = require('../language');
 const Lang = Language.getString('wallpaper');
 
 if (Config.WORKTYPE == 'private') {
-cobra.addCommand({pattern: 'prologo', fromMe: true, desc: Lang.TET_DESC}, (async (message, match) => {
+cobra.addCommand({pattern: 'npack', fromMe: true, desc: Lang.TET_DESC}, (async (message, match) => {
 
     var respoimage = await axios.get(Config.LOGOPK_IMG, { responseType: 'arraybuffer' })
 
@@ -82,7 +82,7 @@ _*🌍ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜱɪꜱᴜʟᴀ ᴡᴇʟɢᴀᴍᴀɢᴇ*_
  }));
 }
 if (Config.WORKTYPE == 'public') {
-cobra.addCommand({pattern: 'prologo', fromMe: true, desc: Lang.TET_DESC}, (async (message, match) => {
+cobra.addCommand({pattern: 'npack', fromMe: true, desc: Lang.TET_DESC}, (async (message, match) => {
 
     var respoimage = await axios.get(Config.LOGOPK_IMG, { responseType: 'arraybuffer' })
 
@@ -157,7 +157,7 @@ _*🌍ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜱɪꜱᴜʟᴀ ᴡᴇʟɢᴀᴍᴀɢᴇ*_
  }));
 }
 if (Config.WORKTYPE == 'public') {
-cobra.addCommand({pattern: 'prologo', fromMe: false, desc: Lang.TET_DESC}, (async (message, match) => {
+cobra.addCommand({pattern: 'npack', fromMe: false, desc: Lang.TET_DESC}, (async (message, match) => {
 
     var respoimage = await axios.get(Config.LOGOPK_IMG, { responseType: 'arraybuffer' })
 
