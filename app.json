@@ -52,6 +52,31 @@
             "required": true,
             "value": "*Copyright (c) 2021 cobra bot*"
         },
+        "ALIVE_CMD": {
+            "description": "Customizable ALIVE command",
+            "required": true,
+            "value": "alive"
+        },
+        "BOT_NAME": {
+            "description": "Customizable BOT(simisimi) command",
+            "required": true,
+            "value": "alive"
+        },
+        "CMDP_MSG": {
+            "description": "Customizable Command Panel Title",
+            "required": true,
+            "value": "default"
+        },
+        "CMDP_STICK": {
+            "description": "Customizable Command Panel Sticker",
+            "required": true,
+            "value": "✪"
+        },
+        "LOGOPK_IMG": {
+            "description": "Customizable Logo Pack Image",
+            "required": true,
+            "value": "https://telegra.ph/file/a1b5345cf2bb012740646.jpg"
+        },
         "XTEAM_API": {
             "description": "xteamapi!... මෙය අත්‍යවශ්‍යම නොව",
             "required": true,
