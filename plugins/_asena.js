@@ -1,12 +1,11 @@
 /* Copyright (C) 2020 Yusuf Usta.
-Recoded Sisula welgamage.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-Cobrabot-2021
-Cobra Dev.
+recoded by sisula welgamage
+cobra bot project
+cobra bot team
+2021
 */
 
-const Asena = require('../events');
+const cobra = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -15,13 +14,13 @@ const Lang = Language.getString('_asena');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'cpanel ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    cobra.addCommand({pattern: 'cpanel ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
-            Asena.commands.map(
+            cobra.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var mmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
@@ -37,39 +36,44 @@ if (Config.WORKTYPE == 'private') {
                         HANDLER = '.';
                     }
                     if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                     }
                     if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
                     }
                     if (command.desc == '' && command.usage == '' && !command.warn == '') {
                         CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                     if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                     }
                     if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                     if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                     if  (command.desc == '' && command.usage == '' && command.warn == '') {
                         CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n\n'
                     }
                     if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                 }
             );
+            if (Config.CMDP_MSG == 'default') {
             await message.client.sendMessage(
-                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Private)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text
-            );    
+                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Private)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text);
+                }
+    else {
+                await message.client.sendMessage(
+                message.jid,Config.CMDP_MSG + '\n\n' + CMD_HELP, MessageType.text);
+                }   
         } else {
             var CMD_HELP = '';
-            Asena.commands.map(
+            cobra.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
@@ -88,48 +92,52 @@ if (Config.WORKTYPE == 'private') {
                             HANDLER = '.';
                         }
                         if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                         }
                         if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
                         }
                         if (command.desc == '' && command.usage == '' && !command.warn == '') {
                             CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*☢️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                         if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                         }
                         if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                         if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                         if  (command.desc == '' && command.usage == '' && command.warn == '') {
                             CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n\n'
                         }
                         if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                     }
                 }
             );
-            if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
+            if (Config.CMDP_MSG == 'default') {
             await message.client.sendMessage(
-                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Private)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text
-            );
+                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Private)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text);
+                }
+    else {
+                await message.client.sendMessage(
+                message.jid,Config.CMDP_MSG + '\n\n' + CMD_HELP, MessageType.text);
+                }
         }
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'cpanel ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    cobra.addCommand({pattern: 'cpanel ?(.*)', fromMe: false, dontAddCommandList: false}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
-            Asena.commands.map(
+            cobra.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var mmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
@@ -145,39 +153,44 @@ else if (Config.WORKTYPE == 'public') {
                         HANDLER = '.';
                     }
                     if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                     }
                     if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
                     }
                     if (command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*☢️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                     if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                     }
                     if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                     if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                     if  (command.desc == '' && command.usage == '' && command.warn == '') {
                         CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n\n'
                     }
                     if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                     }
                 }
             );
+            if (Config.CMDPB_MSG == 'default') {
             await message.client.sendMessage(
-                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Public)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text
-            );    
+                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Private)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text);
+                }
+    else {
+                await message.client.sendMessage(
+                message.jid,Config.CMDP_MSG + '\n\n' + CMD_HELP, MessageType.text);
+                }   
         } else {
             var CMD_HELP = '';
-            Asena.commands.map(
+            cobra.commands.map(
                 async (command) =>  {
-                    if (command.dontAddCommandList || command.pattern === undefined) return;
+                    if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
                         var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                         var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
@@ -196,36 +209,40 @@ else if (Config.WORKTYPE == 'public') {
                             HANDLER = '.';
                         }
                         if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                        CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                         }
                         if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
                         }
                         if (command.desc == '' && command.usage == '' && !command.warn == '') {
                             CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*☢️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                         if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
                         }
                         if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                         if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                         if  (command.desc == '' && command.usage == '' && command.warn == '') {
                             CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n\n'
                         }
                         if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*➛ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
+                            CMD_HELP += '*' + Config.CMDP_STICK + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*💬 ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
                         }
                     }
                 }
             );
-            if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
+            if (Config.CMDPB_MSG == 'default') {
             await message.client.sendMessage(
-                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Public)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text
-            );
+                message.jid,'╔═══════════════════════╗\n 🐍 COBRA WᷤHͥAᷤTᷴSᷯAᷧPP BOT (Private)🆕\n╚═══════════════════════╝\n\n' + CMD_HELP, MessageType.text);
+                }
+    else {
+                await message.client.sendMessage(
+                message.jid,Config.CMDP_MSG + '\n\n' + CMD_HELP, MessageType.text);
+                }
         }
     }));
-}
+}//command panel cobra bot
