@@ -15,7 +15,7 @@ const BOT = ":"
 const NOT_FOUNDAC = "*Invaild Request*"
 const NEED_LOCATIONA = "*Invaild Request*"
 if (Config.WORKTYPE == 'private') {
-Asena.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: BOT_DESC}, async (message, match) => {
+Asena.addCommand({pattern: Config.BOT_NAME + ' ?(.*)', fromMe: true, desc: BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
 	const url = `https://api.simsimi.net/v1/?text=${match[1]}&lang=en&cf=true`;
 	try {
@@ -28,7 +28,7 @@ Asena.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: BOT_DESC}, async (me
 });
 }
 if (Config.WORKTYPE == 'public') {
-Asena.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: BOT_DESC}, async (message, match) => {
+Asena.addCommand({pattern: Config.BOT_NAME + ' ?(.*)', fromMe: false, desc: BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
 	const url = `https://api.simsimi.net/v1/?text=${match[1]}&lang=en&cf=true`;
 	try {
