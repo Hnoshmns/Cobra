@@ -29,7 +29,7 @@ Therefore, 100% efficiency cannot be obtained from Eva Artificial Intelligence.
 The voice recognition doesn't work with eva infrastructure.
 We are using wit.ai's voice recognition for voicy conversation.
 The all input datas must be english. We are using google translate before send users inputs.
-*/
+
 
 
 const Asena = require('../events');
@@ -440,3 +440,4 @@ Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, us
         return await message.client.sendMessage(message.jid, wr_cmd, MessageType.text)
     }
 }));
+*/
