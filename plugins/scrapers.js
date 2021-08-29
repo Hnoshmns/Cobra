@@ -244,6 +244,49 @@ if (config.WORKTYPE == 'private') {
             }
         }
     }));
+    var p_dsc = ''
+    var palr_on = ''
+    var palr_off = ''
+    var psucc_on = ''
+    var psucc_off = ''
+
+    if (config.LANG == 'EN') {
+        p_dsc = 'Actives Anti Group Link Tool.'
+        palr_on = 'AntiGroup is already open!'
+        palr_off = 'AntiGroup is currently closed!'
+        psucc_on = 'AntiGroup Opened Successfully!'
+        psucc_off = 'AntiGroup Closed Successfully!'
+    }
+
+    Asena.addCommand({pattern: 'antigroup ?(.*)', fromMe: true, desc: p_dsc, usage: '.antigroup on / off' }, (async (message, match) => {
+        const anti_status = `${config.ANTIGROUP}`
+        if (match[1] == 'on') {
+            if (anti_status == 'true') {
+                return await message.client.sendMessage(message.jid, '*' + palr_on + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTIGRP_LINK']: 'true'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + psucc_on + '*', MessageType.text)
+            }
+        }
+        else if (match[1] == 'off') {
+            if (anti_status !== 'true') {
+                return await message.client.sendMessage(message.jid, '*' + palr_off + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTIGRP_LINK']: 'false'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + psucc_off + '*', MessageType.text)
+            }
+        }
+    }));
     var auto_dsc = ''
     var alr_on_bio = ''
     var alr_off_bio = ''
